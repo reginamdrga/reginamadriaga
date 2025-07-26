@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gentle Beginnings</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfcfb;
+      color: #333;
+    }
+
+    header {
+      padding: 20px;
+      background: #f8b4b4;
+      color: white;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 0;
+      background-color: #ffe6e6;
+      overflow-x: hidden;
+      transition: width 0.3s;
+      padding-top: 60px;
+      position: fixed;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .container:hover .sidebar {
+      width: 220px;
+    }
+
+    .sidebar a {
+      padding: 15px 25px;
+      text-decoration: none;
+      display: block;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover {
+      background-color: #fdd;
+    }
+
+    /* Dashboard/Main content */
+    .content {
+      margin-left: 0;
+      padding: 20px;
+      transition: margin-left 0.3s;
+      width: 100%;
+    }
+
+    .container:hover .content {
+      margin-left: 220px;
+    }
+
+    .section {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin: 30px 0;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Gentle Beginnings — A Student Nurse's Guide for New Mamas
+</header>
+
+<div class="container">
+  <div class="sidebar">
+    <a onclick="showSection('home')">🏠 Home</a>
+    <a onclick="showSection('faq')">🤵 FAQ</a>
+    <a onclick="showSection('recovery')">🍽️ Recovery</a>
+    <a onclick="showSection('feeding')">🍼 Feeding</a>
+    <a onclick="showSection('baby')">👶 Baby Basics</a>
+    <a onclick="showSection('mental')">🧠 Mental Health</a>
+    <a onclick="showSection('about')">🎓 About</a>
+    <a onclick="showSection('coming')">📅 Coming Soon</a>
+    <a onclick="showSection('sources')">📄 Sources</a>
+    <a onclick="showSection('contact')">📞 Contacts</a>
+  </div>
+
+  <div class="content">
+    <!-- Sections -->
+
+    <div id="home" class="section active">
+      <h2>Welcome, Mama.</h2>
+      <p>You’ve just done something incredible. Whether this is your first or fifth baby, the early postpartum days can feel overwhelming. This website is your gentle guide. No judgment—just care.</p>
+    </div>
+
+   <div id="faq" class="section faq">
+  <h2>🤵 Frequently Asked Questions</h2>
+  <div class="faq-item">
+<ul>
+    <li><strong>Is my bleeding normal?</strong><br>
+      Light to moderate bleeding (lochia) is normal for up to 6 weeks postpartum. Watch out for large clots, foul odor, or soaking a pad in under an hour. <em>(ACOG, 2020)</em>
+    </li>
+
+    <li><strong>Why do I still look pregnant?</strong><br>
+      Your uterus takes about 6–8 weeks to return to its pre-pregnancy size. Mild abdominal bloating and retained fluid are also normal. <em>(Mayo Clinic, 2022)</em>
+    </li>
+
+    <li><strong>I feel sad but I’m not sure why. Is this normal?</strong><br>
+      Yes. Baby blues affect up to 80% of new mothers and typically last 1–2 weeks. If it lasts longer or worsens, seek help. <em>(Postpartum Support International, 2023)</em>
+    </li>
+
+    <li><strong>When can I start exercising again?</strong><br>
+      Light movement is encouraged as soon as you feel ready. For heavier exercise, wait until after your 6-week postpartum check-up. <em>(ACOG, 2021)</em>
+    </li>
+
+    <li><strong>Why am I still having cramps?</strong><br>
+      These are called “afterpains” as your uterus shrinks back to size. They’re more noticeable while breastfeeding. <em>(Cleveland Clinic, 2022)</em>
+    </li>
+
+    <li><strong>When will my period return?</strong><br>
+      If you’re not breastfeeding, it may return in 6–8 weeks. If exclusively breastfeeding, it might not return for several months. <em>(La Leche League International)</em>
+    </li>
+
+    <li><strong>Can I get pregnant again right away?</strong><br>
+      Yes. Ovulation can happen as early as 3 weeks postpartum. Discuss birth control options with your provider. <em>(CDC, 2022)</em>
+    </li>
+
+    <li><strong>Is it normal to feel pain during sex after birth?</strong><br>
+      Yes, due to hormonal changes and healing tissues. Use lubrication and take it slow. Communicate with your partner and consult your provider if it persists. <em>(Mayo Clinic, 2023)</em>
+    </li>
+
+    <li><strong>Why does breastfeeding hurt?</strong><br>
+      Mild discomfort at first is normal. Sharp pain, cracked nipples, or bleeding may mean baby’s latch is off. Ask a lactation consultant for help. <em>(WHO, 2021)</em>
+    </li>
+ <li><strong>My baby sleeps all day and is up at night—is this normal?</strong><br>
+      Yes, many newborns have day-night confusion. Gentle light exposure during the day and quiet darkness at night can help reset their rhythm. <em>(HealthyChildren.org)</em>
+    </li>
+  </ul>
+  </div>
+  </div>
+  
+   <div id="recovery" class="section">
+      <h2>Postpartum Recovery</h2>
+<ul>
+       <li>Rest is vital—accept help and sleep when your baby sleeps. <em>(March of Dimes, 2021)</em></li>
+    <li>Perineal care: Rinse with warm water after using the bathroom and gently pat dry. Use witch hazel pads or sitz baths if needed. <em>(Mayo Clinic)</em></li>
+    <li>C-section: Keep incision clean and dry. Avoid lifting anything heavier than your baby. Monitor for signs of infection. <em>(Johns Hopkins Medicine)</em></li>
+    <li>Hydrate and eat nutritious foods to support healing. <em>(CDC)</em></li>
+    <li>Take your prescribed medications as directed, especially pain meds or stool softeners.</li>
+    <li>Support your pelvic floor with Kegel exercises once cleared by your provider. <em>(NHS UK)</em></li>
+    <li>Manage constipation with fiber-rich foods, water, and gentle movement.</li>
+    <li>Watch for signs of postpartum hemorrhage: sudden heavy bleeding, dizziness, or fainting. Call your provider immediately.</li>
+    <li>Take iron supplements if advised, especially if you experienced blood loss.</li>
+    <li>Attend your postpartum check-up (usually around 6 weeks). This is important for your physical and emotional health.</li>
+  </ul>
+    </div>
+
+    <div id="feeding" class="section">
+      <h2>Feeding Your Baby</h2>
+      <h3>Breastfeeding Tips</h3>
+     <ul>
+    <li><strong>Breastfeeding Tips:</strong>
+      <ul>
+        <li>Make sure baby has a deep latch. Nipples should not appear pinched after feeding.</li>
+        <li>Breastfeed 8–12 times per day in the early weeks.</li>
+        <li>Breastmilk is supply and demand: feed often to increase supply.</li>
+        <li>Use lanolin or breastmilk for nipple care.</li>
+        <li>Breastfed stools may look yellow, seedy, or watery. That’s normal.</li>
+      </ul>
+    </li>
+
+    <li><strong>Formula Feeding:</strong>
+      <ul>
+        <li>Follow exact measurements—don’t dilute formula.</li>
+        <li>Feed every 3–4 hours or as baby shows hunger cues.</li>
+        <li>Discard unfinished formula after an hour.</li>
+        <li>Hold baby upright while feeding to avoid ear infections.</li>
+        <li>Burp your baby halfway and after feeding.</li>
+      </ul>
+    </li>
+
+    <li><strong>General Tips:</strong>
+      <ul>
+        <li>Responsive feeding builds trust—don’t follow the clock too strictly.</li>
+        <li>Spit-up is normal unless it’s forceful and frequent (reflux).</li>
+        <li>Ask for help from a lactation consultant or pediatrician when in doubt.</li>
+      </ul>
+    </li>
+  </ul>
+
+    </div>
+
+    <div id="baby" class="section">
+      <h2>Baby Basics</h2>
+      <ul>
+    <li><strong>Poop:</strong> Expect 3–4 poops/day in the first week. Mustard yellow and seedy for breastfed babies is normal.</li>
+    <li><strong>Umbilical cord care:</strong> Keep clean and dry. Fold diaper away from stump. It should fall off within 1–2 weeks. Call provider if there’s redness, pus, or foul smell.</li>
+    <li><strong>Bathing:</strong> Stick to sponge baths until cord falls off. Then, 2–3 baths/week is enough unless baby gets dirty.</li>
+    <li><strong>Sleep:</strong> Babies should sleep on their backs, in a crib or bassinet with a firm surface. No pillows, blankets, or toys. <em>(AAP Safe Sleep Guidelines, 2022)</em></li>
+    <li>Newborns sleep 14–17 hours a day but in short bursts.</li>
+    <li>Use a pacifier during sleep once breastfeeding is well-established. It may help reduce SIDS. <em>(AAP)</em></li>
+    <li>Track feedings, diapers, and sleep using a baby tracker app or logbook.</li>
+    <li>Bond with skin-to-skin contact often—it helps regulate baby’s heart rate, temperature, and promotes attachment.</li>
+    <li>Always support your newborn’s head and neck when carrying.</li>
+    <li>Take your baby to all scheduled well-baby check-ups and vaccines.</li>
+  </ul>
+    </div>
+
+    <div id="mental" class="section">
+      <h2>Mental Health Check-in</h2>
+      <p>It’s okay not to feel okay. Baby blues are common, but if you feel hopeless, angry, or disconnected, reach out.</p>
+      <h3>Quick Checklist</h3>
+      <ul>
+        <li>Are you sleeping when you can?</li>
+        <li>Eating at least 2 meals a day?</li>
+        <li>Cried more than 5 times today?</li>
+        <li>Feeling disconnected from baby?</li>
+      </ul>
+      <p>If yes to most: talk to someone. You're not alone. Visit <a href="https://www.postpartum.net">postpartum.net</a>.</p>
+    </div>
+
+    <div id="about" class="section">
+      <h2>About the Author</h2>
+      <p>I'm a student nurse who deeply cares about maternal health. I made this site for you—gentle, evidence-informed, and supportive.</p>
+    </div>
+
+    <div id="coming" class="section">
+      <h2>Coming Soon</h2>
+      <ul>
+        <li>Printable checklists</li>
+        <li>"Ask a Nurse Student" box</li>
+        <li>Local clinic and hotline directory</li>
+      </ul>
+    </div>
+
+    <div id="sources" class="section">
+      <h2>Sources</h2>
+      <ul>
+        <li>CDC (2022). Postpartum Care. <a href="https://www.cdc.gov">cdc.gov</a></li>
+        <li>WHO. Maternal Health. <a href="https://www.who.int">who.int</a></li>
+        <li>Postpartum Support International. <a href="https://www.postpartum.net">postpartum.net</a></li>
+        <li>ACOG (2021). Postpartum Care Basics. <a href="https://www.acog.org">acog.org</a></li>
+      </ul>
+    </div>
+    
+<div id="contact" class="section">
+  <h2>📞 Contact</h2>
+  <p><strong>Developer:</strong> Regina Madriaga</p>
+  <p><strong>Email:</strong> rfmadriaga3828@student.fatima.edu.ph</p>
+  <p><strong>Phone:</strong> 0945-155-7404</p>
+</div>
+
+    <footer>
+      Gentle answers. Quiet support. You're doing better than you think.
+    </footer>
+  </div>
+</div>
+
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+</body>
